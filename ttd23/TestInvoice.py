@@ -16,10 +16,9 @@ def test_CanCalculateTotalImpurePrice(invoice, products):
     invoice.totalImpurePrice(products)
     assert invoice.totalImpurePrice(products) == 75
 
-def test_CanCalculateTotalImpurePrice(products):
-    invoice = Invoice()
-    invoice.totalImpurePrice(products)
-    assert invoice.totalImpurePrice(products) == 75
+def test_CanCalculateTotalDiscount(invoice, products):
+    invoice.totalDiscount(products)
+    assert invoice.totalDiscount(products) == 5.62
 
 def test_canCalculateTotalPurePrice(invoice, products):
     invoice.totalPurePrice(products)
